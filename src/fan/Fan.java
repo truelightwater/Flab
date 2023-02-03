@@ -9,6 +9,22 @@ public class Fan implements Direction, WindSpeed {
         this.windSpeed = windSpeed;
     }
 
+    public void setDirection(Direction direction) {
+        this.direction = direction;
+    }
+
+    public void setWindSpeed(WindSpeed windSpeed) {
+        this.windSpeed = windSpeed;
+    }
+
+    public WindSpeed getWindSpeed() {
+        return windSpeed;
+    }
+
+    public Direction getDirection() {
+        return direction;
+    }
+
     @Override
     public void leftDirection() {
         direction.leftDirection();
