@@ -33,5 +33,11 @@ public class Fan implements Direction, WindSpeed {
     @Override
     public void fanWindSpeed(int button) {
         windSpeed.fanWindSpeed(button);
+
+    }
+
+    @Override
+    public void fanWindState(String state) {
+        windSpeed.fanWindState(state);
     }
 }

@@ -28,11 +28,20 @@ public class Main {
                         break;
                 }
             }
+            @Override
+            public void fanWindState(String state) {
+                if (state == "nature") {
+                    System.out.println("자연바람이 나오고 있습니다.");
+                } else if (state == "general") {
+                    System.out.println("일반적인 바람이 나오고 있습니다.");
+                }
+            }
         };
 
         Fan fan = new Fan(direction, windSpeed);
         fan.toDirection(Direction.left);
         fan.fanWindSpeed(2);
+        fan.fanWindState("general");
 
     }
 }
