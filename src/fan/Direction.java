@@ -1,7 +1,10 @@
 package fan;
 
 public interface Direction {
-    void leftDirection();
-    void rightDirection();
+    String left = "left";
+    String right = "right";
+
+    void leftDirection(String state);
+    void rightDirection(String state);
 
 }
