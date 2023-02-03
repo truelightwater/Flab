@@ -4,13 +4,12 @@ public class Main {
     public static void main(String[] args) {
         Direction direction = new Direction() {
             @Override
-            public void leftDirection(String state) {
-                System.out.println("왼쪽만 바람이 붑니다.");
-            }
-
-            @Override
-            public void rightDirection(String state) {
-                System.out.println("오른쪽으로만 바람이 붑니다.");
+            public void toDirection(String state) {
+                if (state == left) {
+                    System.out.println("왼쪽으로만 바람이 붑니다.");
+                } else if (state == right) {
+                    System.out.println("오른쪽으로만 바람이 붑니다.");
+                }
             }
         };
 
@@ -32,8 +31,7 @@ public class Main {
         };
 
         Fan fan = new Fan(direction, windSpeed);
-        fan.leftDirection(Direction.left);
-        fan.rightDirection(Direction.right);
+        fan.toDirection(Direction.left);
         fan.fanWindSpeed(2);
 
     }

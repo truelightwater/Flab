@@ -26,13 +26,8 @@ public class Fan implements Direction, WindSpeed {
     }
 
     @Override
-    public void leftDirection(String state) {
-        direction.leftDirection(state);
-    }
-
-    @Override
-    public void rightDirection(String state) {
-        direction.rightDirection(state);
+    public void toDirection(String state) {
+        direction.toDirection(state);
     }
 
     @Override
