@@ -11,19 +11,19 @@ public class Main {
                     System.out.println("오른쪽으로만 바람이 붑니다.");
                 }
             }
-        };
 
+        };
         WindSpeed windSpeed = new WindSpeed() {
             @Override
-            public void fanWindSpeed(int button) {
+            public void fanWindSpeed(Button button) {
                 switch (button) {
-                    case 1 :
+                    case Level1:
                         System.out.println("약한 바람이 붑니다.");
                         break;
-                    case 2 :
+                    case Level2:
                         System.out.println("중간 바람이 붑니다.");
                         break;
-                    case 3 :
+                    case Level3:
                         System.out.println("강한 바람이 붑니다.");
                         break;
                 }
@@ -40,7 +40,7 @@ public class Main {
 
         Fan fan = new Fan(direction, windSpeed);
         fan.toDirection(Direction.left);
-        fan.fanWindSpeed(2);
+        fan.fanWindSpeed(Button.Level2);
         fan.fanWindState("general");
 
     }

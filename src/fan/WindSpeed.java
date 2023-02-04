@@ -1,6 +1,6 @@
 package fan;
 
 public interface WindSpeed {
-    void fanWindSpeed(int button);
+    void fanWindSpeed(Button button);
     void fanWindState(String state);
 }
