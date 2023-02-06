@@ -14,6 +14,7 @@ public class Main {
 
         };
         WindSpeed windSpeed = new WindSpeed() {
+
             @Override
             public void fanWindSpeed(Button button) {
                 switch (button) {
@@ -28,6 +29,7 @@ public class Main {
                         break;
                 }
             }
+
             @Override
             public void fanWindState(String state) {
                 if (state == "nature") {
@@ -42,6 +44,7 @@ public class Main {
         fan.toDirection(Direction.left);
         fan.fanWindSpeed(Button.Level2);
         fan.fanWindState("general");
+
 
     }
 }
