@@ -1,12 +1,12 @@
 package fanRunnable;
 
-
 import fan2.*;
 import fan2.directions.NoDirection;
 
 public class Customer {
 
     public static void main(String[] args) {
+
         Fan xioami = new Xiaomi();
         xioami.performDirection(Button.LEFT);
         xioami.performWindSpeed(Button.LEVEL3);
