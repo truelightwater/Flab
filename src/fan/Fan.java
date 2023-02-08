@@ -1,8 +1,11 @@
 package fan;
 
 public class Fan implements Direction, WindSpeed {
-    Direction direction;
-    WindSpeed windSpeed;
+    private Direction direction;
+    private WindSpeed windSpeed;
+
+    public Fan() {
+    }
 
     public Fan(Direction direction, WindSpeed windSpeed) {
         this.direction = direction;
@@ -25,8 +28,9 @@ public class Fan implements Direction, WindSpeed {
         return direction;
     }
 
-
-
+    public String toString() {
+        return ("("+direction+ "), ("+windSpeed+")");
+    }
 
 
     @Override
@@ -41,7 +45,6 @@ public class Fan implements Direction, WindSpeed {
 
     @Override
     public void fanWindState(String state) {
-
         windSpeed.fanWindState(state);
     }
 }
