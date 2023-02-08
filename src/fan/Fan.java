@@ -28,10 +28,6 @@ public class Fan implements Direction, WindSpeed {
         return direction;
     }
 
-    public String toString() {
-        return ("("+direction+ "), ("+windSpeed+")");
-    }
-
 
     @Override
     public void toDirection(String state) {
