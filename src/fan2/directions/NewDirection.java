@@ -1,4 +1,7 @@
-package fan2;
+package fan2.directions;
+
+import fan2.Button;
+import fan2.directions.Directionable;
 
 public class NewDirection implements Directionable {
 

@@ -1,4 +1,6 @@
-package fan2;
+package fan2.directions;
+
+import fan2.Button;
 
 public class Direction implements Directionable {
 
