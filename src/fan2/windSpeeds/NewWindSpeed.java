@@ -1,7 +1,6 @@
 package fan2.windSpeeds;
 
 import fan2.Button;
-import fan2.windSpeeds.WindSpeedable;
 
 public class NewWindSpeed implements WindSpeedable {
     @Override

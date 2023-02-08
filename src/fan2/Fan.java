@@ -15,7 +15,6 @@ public class Fan {
         windSpeedable = wind;
     }
 
-
     public void performDirection(Button button) {
         directionable.fanDirection(button);
     }
