@@ -1,20 +1,16 @@
 package fan2;
 
 import fan2.arraylist.ArrayList;
-import fan2.directions.Direction;
 import fan2.directions.Directionable;
-import fan2.windSpeeds.WindSpeed;
 import fan2.windSpeeds.WindSpeedable;
 
-import java.util.HashSet;
-import java.util.Set;
 
 public class Fan {
-    ArrayList<String> history = new ArrayList<>();
-
+    private String msg;
     Directionable directionable;
     WindSpeedable windSpeedable;
-    String msg;
+
+    ArrayList<String> history = new ArrayList<>();
 
     public void setDirectionable(Directionable dir) {
         directionable = dir;
@@ -48,7 +44,7 @@ public class Fan {
     }
 
     public String toString() {
-        String msg = String.valueOf(directionable);
+        msg = String.valueOf(directionable);
 
         char[] temp = msg.toCharArray();
         for (char data : temp) {
