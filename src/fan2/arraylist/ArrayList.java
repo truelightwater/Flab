@@ -1,16 +1,16 @@
 package fan2.arraylist;
 
-public class ArrayList {
+public class ArrayList<S> {
+
     private int size = 0;
     private Object[] elementData = new Object[100];
-
 
     public boolean addFirst(Object obj) {
         return add(0, obj);
     }
 
-    public boolean addLast(Object element) {
-        elementData[size] = element;
+    public boolean addLast(Object obj) {
+        elementData[size] = obj;
         size++;
 
         return true;
@@ -51,6 +51,19 @@ public class ArrayList {
 
     public int size() {
         return size;
+    }
+
+    public String toString() {
+        String str = "[";
+
+        for (int loop = 0; loop < size; loop++) {
+            str += elementData[loop];
+            if (loop < size - 1) {
+                str += ",";
+            }
+        }
+
+        return str + "]";
     }
 
 }
