@@ -7,10 +7,13 @@ import fan2.windSpeeds.WindSpeedable;
 
 public class Fan {
     private String msg;
+
     Directionable directionable;
     WindSpeedable windSpeedable;
 
     ArrayList<String> history = new ArrayList<>();
+    // late binding 생각해보기
+    // ArrayList size 변화 생각해보기
 
     public void setDirectionable(Directionable dir) {
         directionable = dir;
@@ -38,15 +41,17 @@ public class Fan {
 
         return true;
     }
+    // 구현체 리턴해보기
+
 
     public void getStatus() {
-        System.out.println(directionable);
+
     }
 
     public String toString() {
-        msg = String.valueOf(directionable);
+        String message = String.valueOf(directionable);
 
-        char[] temp = msg.toCharArray();
+        char[] temp = message.toCharArray();
         for (char data : temp) {
             System.out.print(data);
         }

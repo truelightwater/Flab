@@ -1,14 +1,11 @@
 package fanRunnable;
 
 import fan2.*;
-
 import fan2.directions.NoDirection;
-import java.util.ArrayList;
 
 public class Customer {
 
     public static void main(String[] args) {
-        ArrayList<Fan> fan = new ArrayList<>();
 
         Fan xioami = new Xiaomi();
         xioami.performDirection(Button.LEFT);
