@@ -1,6 +1,9 @@
-package fan3;
+package fan3.commands;
 
-public class FanOffCommand implements Command{
+import fan3.Fan;
+import fan3.commands.Command;
+
+public class FanOffCommand implements Command {
     Fan fan;
 
     public FanOffCommand(Fan fan) {

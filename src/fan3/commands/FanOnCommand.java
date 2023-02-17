@@ -1,4 +1,7 @@
-package fan3;
+package fan3.commands;
+
+import fan3.Fan;
+import fan3.commands.Command;
 
 public class FanOnCommand implements Command {
     Fan fan;
@@ -10,5 +13,6 @@ public class FanOnCommand implements Command {
     @Override
     public void execute() {
         fan.on();
+
     }
 }

@@ -1,13 +1,13 @@
 package fanRunnable;
 
 import fan3.Fan;
-import fan3.FanOffCommand;
-import fan3.FanOnCommand;
-import fan3.SimpleRemoteControl;
+import fan3.commands.FanOffCommand;
+import fan3.commands.FanOnCommand;
+import fan3.RemoteControl;
 
 public class Customer3 {
     public static void main(String[] args) {
-        SimpleRemoteControl remote = new SimpleRemoteControl();
+        RemoteControl remote = new RemoteControl();
         Fan fan = new Fan();
         FanOnCommand fanOnCommand = new FanOnCommand(fan);
         FanOffCommand fanOffCommand = new FanOffCommand(fan);

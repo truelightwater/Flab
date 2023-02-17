@@ -1,9 +1,11 @@
 package fan3;
 
-public class SimpleRemoteControl {
+import fan3.commands.Command;
+
+public class RemoteControl {
     Command slot;
 
-    public SimpleRemoteControl() { }
+    public RemoteControl() { }
 
     public void setCommand(Command command) {
         slot = command;
