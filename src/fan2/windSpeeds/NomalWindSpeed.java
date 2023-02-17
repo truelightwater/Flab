@@ -2,7 +2,7 @@ package fan2.windSpeeds;
 
 import fan2.Button;
 
-public class WindSpeed implements WindSpeedable {
+public class NomalWindSpeed implements WindSpeedable {
 
     @Override
     public void fanWindSpeed(Button button) {

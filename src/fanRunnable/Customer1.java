@@ -2,7 +2,7 @@ package fanRunnable;
 
 import fan.*;
 
-public class Main {
+public class Customer1 {
     public static void main(String[] args) {
 
         Direction direction = new Direction() {

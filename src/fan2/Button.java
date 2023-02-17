@@ -5,7 +5,7 @@ package fan2;
 - this-play name, order-by ? 속성을 두어서 조금 더 Enum 에 살을 붙이는 방향으로 진행
  */
 public enum Button {
-    POWER("powerOn"), LEFT("left"), RIGHT("right"), CENTER("center"), ROTATION("360"),
+    LEFT("left"), RIGHT("right"), CENTER("center"), ROTATION("360"),
     LEVEL1("1"),LEVEL2("2"), LEVEL3("3"), LEVEL4("4"), LEVEL5("5");
 
     private String button;

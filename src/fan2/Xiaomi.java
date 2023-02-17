@@ -1,13 +1,13 @@
 package fan2;
 
-import fan2.directions.Direction;
-import fan2.windSpeeds.WindSpeed;
+import fan2.directions.NormalDirection;
+import fan2.windSpeeds.NomalWindSpeed;
 
 public class Xiaomi extends Fan {
 
     public Xiaomi() {
-        directionable = new Direction();
-        windSpeedable = new WindSpeed();
+        directionable = new NormalDirection();
+        windSpeedable = new NomalWindSpeed();
     }
 
 }

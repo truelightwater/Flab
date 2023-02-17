@@ -3,7 +3,7 @@ package fanRunnable;
 import fan2.*;
 import fan2.directions.NoDirection;
 
-public class Customer {
+public class Customer2 {
 
     public static void main(String[] args) {
 
@@ -20,7 +20,7 @@ public class Customer {
         Fan mini = new MiniFan();
         mini.performDirection(Button.LEFT);
         mini.setDirectionable(new NoDirection());       // 실행시점에서 구현체를 변경
-        mini.performDirection(Button.POWER);
+        mini.performDirection(Button.LEFT);
         System.out.println("--");
 
 

@@ -2,7 +2,7 @@ package fan2.directions;
 
 import fan2.Button;
 
-public class Direction implements Directionable {
+public class NormalDirection implements Directionable {
 
     public String fanDirection(Button button) {
         String str = "";
