@@ -2,18 +2,18 @@ package fan3.commands;
 
 import fan3.Fan;
 
-public class FanHighCommand implements Command {
+public class FanLowCommand implements Command {
     Fan fan;
     int preSpeed;
 
-    public FanHighCommand(Fan fan) {
+    public FanLowCommand(Fan fan) {
         this.fan = fan;
     }
 
     @Override
     public void execute() {
         preSpeed = fan.getSpeed();
-        fan.high();
+        fan.low();
 
     }
 
