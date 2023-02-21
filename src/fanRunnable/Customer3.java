@@ -25,8 +25,8 @@ public class Customer3 {
         // Command Load
         remote.setCommand(0, mediumCommand, offCommand);
         remote.setCommand(1, highCommand, offCommand);
-        remote.setCommand(3, leftCommand, offCommand);
-        remote.setCommand(4, rightCommand, offCommand);
+        remote.setCommand(2, leftCommand, offCommand);
+        remote.setCommand(3, rightCommand, offCommand);
 
 
         // Execute
