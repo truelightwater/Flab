@@ -18,19 +18,31 @@ public class Customer3 {
         FanLowCommand lowCommand = new FanLowCommand(fanLivingRoom);
         FanOffCommand offCommand = new FanOffCommand(fanLivingRoom);
 
+        FanLeftCommand leftCommand = new FanLeftCommand(fanLivingRoom);
+        FanRightCommand rightCommand = new FanRightCommand(fanLivingRoom);
+        FanFixCommand fixCommand = new FanFixCommand(fanLivingRoom);
+
         // Command Load
         remote.setCommand(0, mediumCommand, offCommand);
         remote.setCommand(1, highCommand, offCommand);
+        remote.setCommand(3, leftCommand, offCommand);
+        remote.setCommand(4, rightCommand, offCommand);
 
 
         // Execute
+        System.out.println(remote);
         remote.onButtonWasPushed(0);
         remote.offButtonWasPushed(0);
-        System.out.println(remote);
         remote.undoButtonWasPushed();
 
         remote.onButtonWasPushed(1);
-        System.out.println(remote);
         remote.undoButtonWasPushed();
+
+        System.out.println("-----------");
+
+        remote.onButtonWasPushed(3);
+        remote.undoButtonWasPushed();
+        remote.onButtonWasPushed(4);
+
     }
 }

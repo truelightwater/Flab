@@ -14,7 +14,6 @@ public class FanMediumCommand implements Command {
     public void execute() {
         preSpeed = fan.getSpeed();
         fan.medium();
-
     }
 
     @Override

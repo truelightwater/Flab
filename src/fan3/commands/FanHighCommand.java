@@ -14,7 +14,6 @@ public class FanHighCommand implements Command {
     public void execute() {
         preSpeed = fan.getSpeed();
         fan.high();
-
     }
 
     @Override

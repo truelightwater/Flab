@@ -41,6 +41,7 @@ public void undoButtonWasPushed() {
 
 public String toString() {
     StringBuffer buffer = new StringBuffer();
+
     buffer.append("\n-----리모컨-----\n");
     for (int i = 0; i < onCommands.length; i++) {
         buffer.append("[slot " + i + "] " + onCommands[i].getClass().getName() +
