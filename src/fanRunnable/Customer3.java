@@ -10,7 +10,7 @@ public class Customer3 {
         RemoteControl remote = new RemoteControl();
 
         // Receiver
-        Fan fanLivingRoom = new Fan("거실");
+        Fan fanLivingRoom = new Fan();
 
         // Command Object
         FanHighCommand highCommand = new FanHighCommand(fanLivingRoom);
@@ -23,26 +23,31 @@ public class Customer3 {
         FanFixCommand fixCommand = new FanFixCommand(fanLivingRoom);
 
         // Command Load
-        remote.setCommand(0, mediumCommand, offCommand);
-        remote.setCommand(1, highCommand, offCommand);
-        remote.setCommand(2, leftCommand, offCommand);
-        remote.setCommand(3, rightCommand, offCommand);
+        remote.setCommand(0, highCommand, offCommand);
+        remote.setCommand(1, mediumCommand, offCommand);
+        remote.setCommand(2, lowCommand, offCommand);
+
+        remote.setCommand(3, leftCommand, fixCommand);
+        remote.setCommand(4, rightCommand, fixCommand);
+        remote.setCommand(5, fixCommand, fixCommand);
 
 
         // Execute
-        System.out.println(remote);
-        remote.onButtonWasPushed(0);
-        remote.offButtonWasPushed(0);
-        remote.undoButtonWasPushed();
+        System.out.println("----선풍기 세기-----");
+        remote.onButtonWasPushed(0);            // 강풍 버튼
+        remote.onButtonWasPushed(1);            // 약풍 버튼
+        remote.undoButtonWasPushed();               // 이전 버튼(강풍)
+        remote.onButtonWasPushed(2);            // 미풍 버튼
+        remote.undoButtonWasPushed();               // 이전 버튼 (강풍)
 
-        remote.onButtonWasPushed(1);
-        remote.undoButtonWasPushed();
 
-        System.out.println("-----------");
+        System.out.println("----선풍기 방향-----");
+        remote.onButtonWasPushed(3);            // 왼쪽 바람
+        remote.onButtonWasPushed(4);            // 오른쪽 바람
+        remote.undoButtonWasPushed();               // 이전 버튼(왼쪽)
+        remote.onButtonWasPushed(5);            // 고정 바람
+        remote.undoButtonWasPushed();               // 이전 버튼(왼쪽)
 
-        remote.onButtonWasPushed(3);
-        remote.undoButtonWasPushed();
-        remote.onButtonWasPushed(4);
 
     }
 }
