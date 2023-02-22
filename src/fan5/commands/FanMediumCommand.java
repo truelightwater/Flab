@@ -1,0 +1,32 @@
+package fan5.commands;
+
+import fan5.Button;
+import fan5.commands.receiver.Fan;
+
+public class FanMediumCommand implements Command {
+    Fan fan;
+    Button preSpeed;
+
+    public FanMediumCommand(Fan fan) {
+        this.fan = fan;
+    }
+
+    @Override
+    public void execute() {
+        preSpeed = fan.getSpeed();
+        fan.medium();
+    }
+
+    @Override
+    public void undo() {
+        if (preSpeed == Button.HIGH) {
+            fan.high();
+        } else if (preSpeed == Button.MEDIUM) {
+            fan.medium();
+        } else if (preSpeed == Button.LOW) {
+            fan.low();
+        } else if (preSpeed == Button.OFF) {
+            fan.off();
+        }
+    }
+}
